@@ -12,7 +12,7 @@
     "rebuild:optimized": "node dist/scripts/rebuild-optimized.js",
     "validate": "node dist/scripts/validate.js",
     "test-nodes": "node dist/scripts/test-nodes.js",
-    "start": "node dist/mcp/index.js",
+    "start": "MCP_MODE=http PORT=${PORT:-3000} node dist/mcp/index.js",
     "start:http": "MCP_MODE=http node dist/mcp/index.js",
     "start:http:fixed": "MCP_MODE=http USE_FIXED_HTTP=true node dist/mcp/index.js",
     "start:n8n": "N8N_MODE=true MCP_MODE=http node dist/mcp/index.js",
